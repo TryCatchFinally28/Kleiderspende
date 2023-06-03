@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kleiderspende</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" async></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/Logo Kleiderspende.jpeg" alt="Logo">
+        <nav>
+            <!-- Globale Navigationselemente -->
+            <ul>
+                <li><a href="home.html">Startseite</a></li>
+                <li><a href="about.html">Über uns</a></li>
+                <li><a href="services.html">Leistungen</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Content-Bereich -->
+        <section>
+            <h1>Kleiderspende</h1>
+            <p>Füllen Sie das folgende Formular aus, um Ihre Kleiderspende zu registrieren:</p>
+
+            <form action="submit.php" method="POST">
+                <label for="registration-type">Art der Spende:</label>
+                <select name="registration-type" id="registration-type">
+                    <option value="persönliche-übergabe">Persönliche Übergabe</option>
+                    <option value="abholung">Abholung</option>
+                </select>
+
+                <div id="personal-handover-fields">
+                    <label for="clothing-type">Art der Kleidung:</label>
+                    <input type="text" name="clothing-type" id="clothing-type">
+
+                    <label for="crisis-area">Aktuelles Krisengebiet:</label>
+                    <select name="crisis-area" id="crisis-area">
+                        <option value="krisengebiet-1">Krisengebiet 1</option>
+                        <option value="krisengebiet-2">Krisengebiet 2</option>
+                        <option value="krisengebiet-3">Krisengebiet 3</option>
+                    </select>
+                </div>
+
+                <div id="pickup-fields">
+                    <label for="pickup-address">Abholadresse:</label>
+                    <input type="text" name="pickup-address" id="pickup-address">
+
+                    <label for="clothing-type">Art der Kleidung:</label>
+                    <input type="text" name="clothing-type" id="clothing-type">
+
+                    <label for="crisis-area">Aktuelles Krisengebiet:</label>
+                    <select name="crisis-area" id="crisis-area">
+                        <option value="krisengebiet-1">Krisengebiet 1</option>
+                        <option value="krisengebiet-2">Krisengebiet 2</option>
+                        <option value="krisengebiet-3">Krisengebiet 3</option>
+                    </select>
+                </div>
+                <input type="submit" value="Registrieren">
+            </form>
+
+        </section>
+        <figure>
+        <figcaption>Unsere Erfolgsgeschichte</figcaption>
+        <a href="successStory.html">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_jzZuzbdvbU_NvVKgoKgbtX18k5-E5lEPlQ&usqp=CAU" alt="Erfolgsgeschichte"></a>
+        </figure>
+    </main>
+   
+    <footer>
+        <div>
+                <a href ="privacy.html">Datenschutz</a>
+                <a href ="imprint.html">Impressum</a>
+                <!-- Weitere rechtliche Informationen -->
+            </div>
+        </footer>
