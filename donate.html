@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kleiderspende</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--Lokale Bibliothek, um das Hamburger Menü anzeigen zu können-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="script.js" async></script>
+</head>
+<body>  
+</body>
+<header>
+    <!-- Top Navigations Menü-->
+    <div class="topnav">
+        <a href="index.html" class="active">
+          <img src="https://raw.githubusercontent.com/TryCatchFinally28/Kleiderspende/master/images/Logo%20Kleiderspende.jpeg" height="80" width="80" alt="Logo">
+        </a>
+      <nav>
+    <ul class="menu-items">
+        <!--Navigations Menü (hidden by default)-->
+        <div id="myLinks">
+        <li><a href="donate.html">Kleidung spenden</a></li>
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="about.html">Über uns</a></li>
+        <li><a href="services.html">Leistungen</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </div>
+      </ul>
+    </div>
+      <a href="javasript:void(0);" class="icon" onclick="mobileMenu()">
+        <i class="fa fa-bars"></i>
+      </a>
+        </nav>
+    </header>
+    <main id="main-content">
+        <!-- Content-Bereich -->
+        <section class="donation-section">
+            <h1>Kleiderspende<hi>
+            <div class="selection">
+            <p>Füllen Sie das folgende Formular aus, um Ihre Kleiderspende zu registrieren:</p>
+    
+            <form action="submit.php" method="POST">
+                <label for="registration-type">Art der Spende:</label>
+                <select name="registration-type" id="registration-type">
+                    <option value="persönliche-übergabe">Übergabe an der Geschäftsstelle</option>
+                    <option value="abholung">Abholung</option>
+                </select>
+            </di>
+
+            <div id="personal data">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" required pattern="[A-Za-z]">
+                    <label for="vorname">Vorname:</label>
+                    <input type="text" name="vorname" required pattern="[A-Za-z]">
+                    <label for="email">E-Mail-Adresse:</label>
+                    <input type="email" name="email" required>
+                    <input type="number" name="age" min="18" max="99">
+
+            </div>
+    
+                <div id="personal-handover-fields">
+                    <label for="clothing-type">Art der Kleidung:</label>
+                    <input type="text" name="clothing-type" id="clothing-type">
+    
+                    <label for="crisis-area">Aktuelles Krisengebiet:</label>
+                    <select name="crisis-area" id="crisis-area">
+                        <option value="krisengebiet-1">Krisengebiet 1</option>
+                        <option value="krisengebiet-2">Krisengebiet 2</option>
+                        <option value="krisengebiet-3">Krisengebiet 3</option>
+                    </select>
+                </div>
+    
+                <div id="pickup-fields">
+                    <label for="pickup-address">Abholadresse:</label>
+                    <input type="text" name="pickup-address" id="pickup-address">
+    
+                    <label for="clothing-type">Art der Kleidung:</label>
+                    <input type="text" name="clothing-type" id="clothing-type">
+    
+                    <label for="crisis-area">Aktuelles Krisengebiet:</label>
+                    <select name="crisis-area" id="crisis-area">
+                        <option value="krisengebiet-1">Krisengebiet 1</option>
+                        <option value="krisengebiet-2">Krisengebiet 2</option>
+                        <option value="krisengebiet-3">Krisengebiet 3</option>
+                    </select>
+                </div>
+                <input type="submit" value="Registrieren">
+            </form>
+    
+        </section>
+    </main>
+   
+    <footer>
+        <div class="container">
+          <div class="footer-section">
+          </div>
+          <div class="footer-section">
+            <h3>Service</h3>
+            <ul>
+              <li><a href="privacy.html">Datenschutz</a></li>
+              <li><a href="imprint.html">Impressum</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </body>
+    </html>
+    
