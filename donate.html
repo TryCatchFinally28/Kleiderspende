@@ -1,111 +1,148 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kleiderspende</title>
-    <link rel="stylesheet" href="styles.css">
-    <!--Lokale Bibliothek, um das Hamburger Menü anzeigen zu können-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Lokale Bibliothek, um das Hamburger Menü anzeigen zu können -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <script src="script.js" async></script>
 </head>
-<body>  
-</body>
-<header>
-    <!-- Top Navigations Menü-->
-    <div class="topnav">
-        <a href="index.html" class="active">
-          <img src="https://raw.githubusercontent.com/TryCatchFinally28/Kleiderspende/master/images/Logo%20Kleiderspende.jpeg" height="80" width="80" alt="Logo">
-        </a>
-      <nav>
-    <ul class="menu-items">
-        <!--Navigations Menü (hidden by default)-->
-        <div id="myLinks">
-        <li><a href="donate.html">Kleidung spenden</a></li>
-        <li><a href="index.html">Startseite</a></li>
-        <li><a href="about.html">Über uns</a></li>
-        <li><a href="services.html">Leistungen</a></li>
-        <li><a href="contact.html">Kontakt</a></li>
-      </div>
-      </ul>
-    </div>
-      <a href="javasript:void(0);" class="icon" onclick="mobileMenu()">
-        <i class="fa fa-bars"></i>
-      </a>
-        </nav>
-    </header>
-    <main id="main-content">
-        <!-- Content-Bereich -->
-        <section class="donation-section">
-            <h1>Kleiderspende<hi>
-            <div class="selection">
-            <p>Füllen Sie das folgende Formular aus, um Ihre Kleiderspende zu registrieren:</p>
-    
-            <form action="submit.php" method="POST">
-                <label for="registration-type">Art der Spende:</label>
-                <select name="registration-type" id="registration-type">
-                    <option value="persönliche-übergabe">Übergabe an der Geschäftsstelle</option>
-                    <option value="abholung">Abholung</option>
-                </select>
-            </di>
-
-            <div id="personal data">
-                    <label for="name">Name:</label>
-                    <input type="text" name="name" required pattern="[A-Za-z]">
-                    <label for="vorname">Vorname:</label>
-                    <input type="text" name="vorname" required pattern="[A-Za-z]">
-                    <label for="email">E-Mail-Adresse:</label>
-                    <input type="email" name="email" required>
-                    <input type="number" name="age" min="18" max="99">
-
-            </div>
-    
-                <div id="personal-handover-fields">
-                    <label for="clothing-type">Art der Kleidung:</label>
-                    <input type="text" name="clothing-type" id="clothing-type">
-    
-                    <label for="crisis-area">Aktuelles Krisengebiet:</label>
-                    <select name="crisis-area" id="crisis-area">
-                        <option value="krisengebiet-1">Krisengebiet 1</option>
-                        <option value="krisengebiet-2">Krisengebiet 2</option>
-                        <option value="krisengebiet-3">Krisengebiet 3</option>
-                    </select>
-                </div>
-    
-                <div id="pickup-fields">
-                    <label for="pickup-address">Abholadresse:</label>
-                    <input type="text" name="pickup-address" id="pickup-address">
-    
-                    <label for="clothing-type">Art der Kleidung:</label>
-                    <input type="text" name="clothing-type" id="clothing-type">
-    
-                    <label for="crisis-area">Aktuelles Krisengebiet:</label>
-                    <select name="crisis-area" id="crisis-area">
-                        <option value="krisengebiet-1">Krisengebiet 1</option>
-                        <option value="krisengebiet-2">Krisengebiet 2</option>
-                        <option value="krisengebiet-3">Krisengebiet 3</option>
-                    </select>
-                </div>
-                <input type="submit" value="Registrieren">
-            </form>
-    
-        </section>
-    </main>
-   
-    <footer>
-        <div class="container">
-          <div class="footer-section">
+<body class="donate">  
+    <header>
+        <!-- Top Navigations Menü-->
+        <div class="topnav">
+          <a href="index.html" class="active">
+            <img src="https://raw.githubusercontent.com/TryCatchFinally28/Kleiderspende/master/images/Logo%20Kleiderspende.jpeg" height="80" width="80" alt="Logo">
+          </a>
+        <nav>
+          <ul class="menu-items">
+            <!--Navigations Menü (hidden by default)-->
+            <div id="myLinks">
+            <li><a href="donate.html">Kleidung spenden</a></li>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="about.html">Über uns</a></li>
+            <li><a href="services.html">Leistungen</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
           </div>
-          <div class="footer-section">
-            <h3>Service</h3>
-            <ul>
-              <li><a href="privacy.html">Datenschutz</a></li>
-              <li><a href="imprint.html">Impressum</a></li>
-            </ul>
-          </div>
+          </ul>
         </div>
-      </footer>
-    </body>
-    </html>
+        <!--Suchformular-->
+        <form id="search-form">
+          <input type="text" id="search-input" placeholder="Suchen">
+          <button type="submit">Suchen</button>
+        </form>
+        
+          <a href="javascript:void(0);" class="icon" onclick="mobileMenu()">
+            <i class="fa fa-bars"></i>
+          </a>
+          </div>
+        </nav>
+      </header>
+
+  <main id="main-content">
+    <!--Ergebnisse anzeigen-->
+    <div id="search-results"></div>
     
+    <!-- Content-Bereich -->
+    <section class="donation-section">
+      <h1>Kleiderspende</h1>
+      <div class="selection">
+        <b><p>Füllen Sie das folgende Formular aus, um Ihre Kleiderspende zu registrieren:</p><br></b>
+        <form id="donateForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="registration-type">Art der Spende:</label>
+              <select name="registration-type" id="registration-type"  required>
+                <option value="persönliche-übergabe">Geschäftsstelle</option>
+                <option value="abholung">Abholung</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" name="name" id="name" required pattern="[A-Za-zÄÖÜäöüß]{2,}">
+            </div>
+            <div class="form-group">
+              <label for="vorname">Vorname:</label>
+              <input type="text" name="vorname" id="vorname" required pattern="[A-Za-zÄÖÜäöüß]{2,}">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <div id="pickup-fields">
+                <label for="street">Straße:</label>
+                <input type="text" name="street" id="street">
+                <label for="houseNumber">Hausnummer:</label>
+                <input type="text" name="houseNumber" id="houseNumber">
+                <label for="zip">Postleitzahl:</label>
+                <input type="text" name="street" id="zip">
+                <label for="location">Ort:</label>
+                <input type="text" name="location" id="location">
+                <label for="packages">Anzahl der Pakete:</label>
+              <select name="packages" id="packages">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">E-Mail-Adresse:</label>
+              <input type="email" name="email" id="email" required>
+
+              
+            </div>
+          </div>
+        
+          <div class="form-row">
+            <div class="form-group">
+
+              <label for="crisis-area">Aktuelles Krisengebiet:</label>
+              <select name="crisis-area" id="crisis-area">
+              <option value="krisengebiet-1">Krisengebiet 1</option>
+              <option value="krisengebiet-2">Krisengebiet 2</option>
+              <option value="krisengebiet-3">Krisengebiet 3</option>
+
+              </select>
+            </div>
+            <div class="form-group">
+              <div id="personal-handover-fields">
+                <label for="personal-clothing-type">Art der Kleidung:</label>
+                <input type="text" name="personal-handover-fields" id="personal-clothing-type">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="age">Alter:</label> 
+              <input type="number" name="age" id="age" min="18" max="99">
+            </div>
+          </div>
+
+          <button type="submit" id="submitBtn">Registrieren </button>
+        </form>
+        <div id="confirmationMessage" style="display: none;"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-section">
+      </div>
+      <div class="footer-section">
+        <h3>Service</h3>
+        <ul>
+          <li><a href="privacy.html">Datenschutz</a></li>
+          <li><a href="imprint.html">Impressum</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

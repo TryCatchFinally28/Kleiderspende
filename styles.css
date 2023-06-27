@@ -1,116 +1,714 @@
 /* Reset CSS */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Global Styles */
-  body {
-    font-family: Arial, sans-serif;
-  }
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    display: flex;
-    flex-direction: column;
-    background-color: #f2f2f2;
-  }
-  
-  main {
-    flex-grow: 1;
-    display: flex;
-    align-items:baseline;
-    justify-content: center;
-  }
-  
-  
-  /* Header Styles */
-  header {
-    background-color: #f1f1f1;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo img {
-    height: 50px;
-  }
-  
-  nav ul {
-    list-style-type: none;
-  }
-  
-  nav ul li {
-    display: inline-block;
-    margin-left: 20px;
-  }
-  
-  nav ul li:first-child {
-    margin-left: 0;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  /* Main Content Styles */
-  main {
-    padding: 20px;
-    background-color: burlywood;
-    background-image: url("../images/Helping Hands.jpg");
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+ body {
+ font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+}
+  /* Body index.html */
+  body.index {
+  background: url("https://raw.githubusercontent.com/TryCatchFinally28/Kleiderspende/master/images/Hands.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   }
-  
-  @media screen and (max-width: 767px) {
-    main {
-        display: block;
-    }
 
-  } 
-
-  .content {
-    margin-bottom: 40px;
-  }
-  
-   Footer Styles 
-  footer {
-    background-color: black;
-    color: #181616;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-  }
-  
-  
-  footer ul {
-    list-style-type: none;
-  }
-  
-  footer ul li {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
-  footer ul li:last-child {
-    margin-right: 0;
-  }
-  
-  footer ul li a {
-    text-decoration: none;
-    color: #fff;
-  }
-  
-  .social-media img {
-    height: 20px;
-  }
  
+/* Body privacy.html */
+  .priv {
+      background-color:#f9f9f9;
+  }
+
+
+  .privacy {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+  }
+
+  /*Body donate.html*/
+ .donate {
+  background-color: #f9f9f9;
+ } 
+  .privacy h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+  }
+  
+  .privacy h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+  }
+  
+  .privacy p {
+      margin-bottom: 15px;
+  }
+  
+  .privacy b {
+      font-weight: bold;
+  }
+  
+
+/* Media Query für den Body */
+@media screen and (max-width: 1024px) {
+  body {
+    min-height: 90vh;
+    display: block;
+    background-size: contain;
+
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    min-height: 80vh;
+    display: block;
+    background-size: 767px;
+
+  }
+}
+
+@media screen and (max-width: 620px) {
+  body {
+    min-height: 70vh;
+    display: block;
+    background-size: 620px;
+
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    min-height: 60vh;
+    display: block;
+    background-size: 480px;
+
+  }
+}
+
+/* Header Styles */
+header {
+  background-color:rgb(60, 212, 166);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+/* Style Navigation Menü */
+.topnav {
+  overflow: hidden;
+  position: relative;
+
+}
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style Navigation Menü Links*/
+.topnav a {
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 0;
+}
+
+/* Grauer Hintergrund hinzufügen bei Mouse over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style aktive Links */
+.active {
+  background-color: rgb(250, 248, 246);
+  color: black;
+}
+
+
+.mobile-menu-icon {
+  display: none;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.logo img {
+  height: 70px;
+  width: 70px;
+  margin-left: 0;
+}
+
+
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+
+
+
+/* Media Query für den Header */
+@media screen and (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    padding: 15px;
+    align-items: flex-start;
+  }
 
   
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+}
+
+
+@media screen and (max-width: 672px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    display: inline;
+  }
+}
+
+
+
+.mobile-items.active li {
+  display: block;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 544px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 8px;
+  }
+
+  nav ul {
+    margin-top: 8px;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    display: block;
+  }
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  align-items: baseline;
+  margin: 100px;
+  justify-content: center;
+  padding: 100px;
+  flex-grow: 1;
+}
+
+
+.selection {
+  grid-column: span 2;
+}
+
+.selector {
+  background-size: cover;
+  background-position: center;
+}
+
+/* Main Formular */
+#main-content {
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  
+
+}
+
+/* Style donation formular*/
+.donation-section {
+  background-color: #c4a300;
+  max-width: 800px;
+  padding: 80px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px
+
+}
+
+#confirmationMessage {
+  display: block;
+  
+}
+
+/*Media Querys Regitrierungsformular*/
+@media screen and (max-width: 1024px) {
+#main-content {
+  padding: 20px;
+}
+.donation-section {
+  padding: 40px;
+}
+
+}
+
+@media screen and (max-width: 767px) {
+#main-content {
+  padding: 12px;
+}
+.donation-section {
+  padding: 30px;
+}
+
+.donation-section p {
+font-size: small;
+}
+
+#donateForm {
+width: 10px;
+}
+
+}
+
+@media screen and (max-width: 672px) {
+#main-content {
+  padding: 10px;
+}
+.donation-section {
+  padding: 20px;
+}
+
+}
+
+@media screen and (max-width: 490px) {
+
+/* Änderungen am Header */
+header {
+  padding: 10px;
+}
+
+.topnav {
+  flex-direction: column;
+}
+
+.menu-items {
+  display: none;
+}
+
+#myLinks {
+  display: block;
+}
+
+/* Änderungen am Formular */
+.form-group {
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+
+/* Änderungen am Footer */
+.footer-section {
+  text-align: center;
+}
+}
+
+
+.cta-button {
+  margin-bottom: 30px auto;
+  width: 300px;
+  height: 100px;
+  border-radius: 10px;
+  background-color:#ee5a5a;
+
+}
+
+.cta-button:hover {
+  background-color: #31cb20;
+  color: #ddd;
+  transition: 0.7s;
+
+}
+
+.cta-button:focus {
+outline-color: transparent;
+outline-style: solid;
+box-shadow: 0 0 0 4px #5a01a7;
+transition: 0.7s;
+}
+
+.cta-button:active {
+  background-color: rgb(69, 69, 221);
+
+}
+
+
+.cta-button {
+  color:#fff;
+  font-size: 30px;
+  font-family: sans-serif;
+  text-align: center;
+  line-height: 100px;
+
+}
+
+.row {
+  margin: 50px;
+}
+
+.hero-content {
+  text-align: left;
+  margin-bottom: 30px auto;
+}
+
+.hero-content h1 {
+ 
+  font-size: 36px;
+  margin-bottom: 10px;
+ 
+}
+
+.hero-content p {
+  font-size: 18px;
+  color:black
+  
+}
+
+
+
+/* Media Query Hero-Content */
+@media screen and (max-width: 767px) {
+
+
+  .row {
+    margin: 20px;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-content > h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  float: left; 
+
+}
+
+.hero-content > p {
+  font-size: 15px;
+} 
+
+}
+
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+/* Formular donate.html styling */
+label {
+  display: block;
+  font-weight: bold;
+}
+
+#submitBtn {
+  background-color: #f47f24;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#submitBtn:hover {
+  background-color: #31cb20;
+  transition: all ease-in-out 0.2s;
+
+}
+
+
+
+
+/* Footer Styles */
+
+footer {
+  background-color: rgb(60, 212, 166);
+  padding: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer-section > h3 {
+  font-size: 30px;
+
+}
+
+
+
+footer h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+footer ul li {
+  margin-bottom: 5px;
+  
+}
+
+footer ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+
+.imprint {
+  background-color:#f9f9f9;
+}
+
+#imp {
+  background-color: #f9f9f9;
+}
+
+#about{
+  background-color: #f9f9f9;
+}
+
+.about-main {
+  text-align: justify;
+  max-width: 800px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: black;
+}
+
+.contact-form {
+  margin-bottom: 50px;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.contact-form form {
+  display: grid;
+  gap: 10px;
+}
+
+.contact-form .form-group {
+  display: grid;
+  gap: 5px;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 5px;
+}
+
+.contact-form button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #f47f24;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: #31cb20;
+  transition: all ease-in-out 0.2s;
+}
+
+.contact-details {
+  margin-bottom: 50px;
+}
+
+.contact-details h2 {
+  margin-bottom: 20px;
+}
+
+.contact-info h3 {
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin-bottom: 20px;
+}
+
+#message {
+  width: 800px;
+  height: 400px;
+}
+
+/* Media Queries für Bildschirmgrößen kleiner als 768px */
+@media screen and (max-width: 768px) {
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+}
+
+#message {
+  width: 100%;
+  height: 200px;
+}
+}
+
+/* Media Queries für Bildschirmgrößen kleiner als 480px contact.html */
+@media screen and (max-width: 479px) {
+.contact-form {
+  margin-bottom: 30px;
+}
+
+.contact-form h2 {
+  font-size: 24px;
+}
+
+.contact-form button[type="submit"] {
+  padding: 8px 16px;
+}
+}
+
+/* Media Queries für Bildschirmgrößen kleiner als 769px about.html */
+@media screen and (max-width: 768px) {
+.about-main {
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 0 10px;
+ 
+}
+}
+
+/* Media Queries für Bildschirmgrößen kleiner als 480px about.html */
+@media screen and (max-width: 479px) {
+.about-main {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 0 10px;
+  text-align: center;
+}
+
+}
+
+
+/* Media Queries für Bildschirmgrößen kleiner als 415px */
+@media screen and (max-width: 414px) {
+.about-main {
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 0 10px;
+  text-align: center;
+
+}
+}
+
+#service {
+background-color: #f9f9f9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
